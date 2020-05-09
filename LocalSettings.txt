@@ -41,3 +41,15 @@ $wgLogos = [
 	]
 ];
 $wgFavicon = "$wgResourceBasePath/favicon.ico";
+
+// Apply config.json
+$config = json_decode(
+	file_get_contents( 'config.json' ),
+	true
+);
+if ( $config ) {
+	foreach ( $config as $key => $value ) {
+		$name = "wg$key";
+		$$name = $value;
+	}
+}
