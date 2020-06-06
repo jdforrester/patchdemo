@@ -21,15 +21,20 @@ $wgParsoidSettings = [
 ];
 
 // VisualEditor required configuration
-$wgDefaultUserOptions['visualeditor-enable'] = 1;
 $wgVirtualRestConfig['modules']['parsoid'] = [
 	'url' => $wgServer . $wgScriptPath . '/rest.php',
 ];
+// Enable VE by default (T254349)
+$wgDefaultUserOptions['visualeditor-enable'] = 1;
+$wgHiddenPrefs[] = 'visualeditor-enable';
 // VE NWE beta feature
 $wgVisualEditorEnableWikitextBetaFeature = true;
 
 // DiscussionTools required configuration
 $wgLocaltimezone = 'UTC';
+
+// InstantCommons
+$wgUseInstantCommons = true;
 
 // Logo
 $wgLogos = [

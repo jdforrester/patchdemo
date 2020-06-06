@@ -35,7 +35,6 @@ if ( $useOAuth ) {
 	if ( !empty( $_SESSION['access_key'] ) ) {
 		$accessToken = new Token( $_SESSION['access_key'], $_SESSION['access_secret'] );
 		$user = $client->identify( $accessToken );
-		echo "<div class='user'>Logged in as <b>{$user->username}</b> [<a href='?logout'>Log out</a>]</div>";
 	} else {
 		$client->setCallback( $config[ 'oauth' ][ 'callback' ] );
 
@@ -44,7 +43,7 @@ if ( $useOAuth ) {
 		$_SESSION['request_key'] = $token->key;
 		$_SESSION['request_secret'] = $token->secret;
 
-		echo "<a href='$authUrl'>Sign in with OAuth</a> to create and manage wikis.";
+		echo "</header><main><a href='$authUrl'>Sign in with OAuth</a> to create and manage wikis.";
 		include 'footer.html';
 		die();
 	}

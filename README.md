@@ -1,4 +1,4 @@
-With Patch Demo, you too can spin up a MediaWiki instance running a particular patch from Wikimedia Gerrit. (To my knowledge, the idea was first described at <https://phabricator.wikimedia.org/T76245>.)
+With Patch Demo, you too can spin up a MediaWiki instance running a particular patch from Wikimedia Gerrit. (To my knowledge, the idea was first described in [T76245](https://phabricator.wikimedia.org/T76245).)
 
 This project is not secure. You should only install it in disposable virtual machines, and maybe have some monitoring in place in case someone starts mining bitcoin on them.
 
@@ -6,7 +6,7 @@ While I've made token effort to avoid remote code execution vulnerabilities, the
 
 Features
 ----
-* Create a public wiki with bundled extensions/skins
+* Create a public wiki with [bundled extensions/skins](./repositories.txt)
 * Use a specific release or WMF version
 * Apply any number of patches to MediaWiki, extensions or skins
 * Require that patches have V+2 review (token security effort)
