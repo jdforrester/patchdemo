@@ -3,7 +3,7 @@
 		form = document.getElementById( 'new-form' ),
 		siteConfig = form.querySelector( '[name=siteConfig]' );
 
-  form.addEventListener( 'submit', function ( e ) {
+	form.addEventListener( 'submit', function ( e ) {
 		if ( siteConfig.value.trim() ) {
 			try {
 				JSON.parse( siteConfig.value );
